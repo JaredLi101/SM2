@@ -3693,9 +3693,10 @@ function sm2Encrypt(data, publickey, cipherMode) {
     // msg = SM2.utf8tob64(msg);
     var msgData = CryptoJS.enc.Utf8.parse(data);
 
-    msgData = CryptoJS.enc.Base64.stringify(msgData);
-	//在转utf-8
-    msgData = CryptoJS.enc.Utf8.parse(msgData);
+    //先转base64
+    //msgData = CryptoJS.enc.Base64.stringify(msgData);
+    //再转utf-8
+    //msgData = CryptoJS.enc.Utf8.parse(msgData);
 
     var pubkeyHex = publickey;
     if (pubkeyHex.length > 64 * 2) {
