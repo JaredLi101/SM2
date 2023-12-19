@@ -34,7 +34,7 @@
             var msg = $msg.val();
 
             for (var i = 0, len = 20; i < len; i++) {
-                var encryptData = sm2Encrypt(msg, pubkeyHex, 0);
+                var encryptData = sm2Encrypt(msg, pubkeyHex, 1);
 
                 keyCollection.push(encryptData);
                 item += `<li class="cipher-items-item">{SM2}${encryptData}</li>`
